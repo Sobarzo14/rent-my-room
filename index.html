@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Rental Service</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Room Rental Service</h1>
+
+    <h2>Add a Username</h2>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <button id="addUser" type="button" onclick="addUser()">Add User</button>
+    <h2>Retrieve Reservation Info</h2>
+    <label for="usernameRetrieve">Username:</label>
+    <input type="text" id="usernameRetrieve" name="username" required>
+    <button type="submit" onclick="getReservation()">Retrieve Reservation Info</button>
+    <table id="reservationInfo">
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Reservation Date</th>
+                <th>Reservation Time</th>
+                <th>Number of Hours</th>
+            </tr>
+        </thead>
+        <tbody id="reservationInfoTable">
+        </tbody>
+    </table>
+
+    <h2>List of Reservations for All Users</h2>
+    <button id="listReservationsBtn" onclick="getAll()">List Reservations</button>
+    <table id="allReservations">
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Reservation Date</th>
+                <th>Reservation Time</th>
+                <th>Number of Hours</th>
+            </tr>
+        </thead>
+        <tbody id="allReservationsTable">
+        </tbody>
+    </table>
+
+    <h2>Create a Reservation</h2>
+    <label for="usernameCreate">Username:</label>
+    <input type="text" id="usernameCreate" name="username" required><br>
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate" name="startDate" required><br>
+    <label for="startTime">Start Time:</label>
+    <input type="time" id="startTime" name="startTime" required><br>
+    <label for="hours">Number of Hours:</label>
+    <input type="number" id="hours" name="hours" required><br>
+    <button type="submit" onclick="addReservation()">Create Reservation</button>
+
+    <h2>Update a Reservation</h2>
+    <label for="usernameUpdate">Username:</label>
+    <input type="text" id="usernameUpdate" name="username" required><br>
+    <label for="startDateUpdate">Start Date:</label>
+    <input type="date" id="startDateUpdate" name="startDate" required><br>
+    <label for="startTimeUpdate">Start Time:</label>
+    <input type="time" id="startTimeUpdate" name="startTime" required><br>
+    <label for="hoursUpdate">Number of Hours:</label>
+    <input type="number" id="hoursUpdate" name="hours" required><br>
+    <button type="submit" onclick="updateReservation()">Update Reservation</button>
+
+    <h2>Delete a Reservation</h2>
+    <label for="usernameDelete">Username:</label>
+    <input type="text" id="usernameDelete" name="username" required>
+    <button type="submit" onclick="deleteReservation()">Delete Reservation</button>
+
+    <script src="client.js"></script>
+</body>
+</html>
